@@ -220,7 +220,7 @@ header nav .nav-sections ul > li > ul > li {
       height: 50px;
       width: auto;
       background-color: white;
-      opacity: 60%;
+      opacity: 0.6;
       mask-position: center;
       margin-bottom: 15px;
     }
@@ -247,6 +247,10 @@ header nav .nav-sections ul > li > ul > li {
       border-bottom: 1px solid black;
       position: relative;
 
+      >ul {
+        display: none;
+      }
+
       &:hover {
         background-color: #333;
         color: var(--yellow);
@@ -272,14 +276,8 @@ header nav .nav-sections ul > li > ul > li {
         }
       }
 
-      >ul {
-        display: none;
-      }
+     
     }
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 8px 0;
   }
 }
 
