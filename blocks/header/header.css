@@ -245,6 +245,32 @@ header nav .nav-sections ul > li > ul > li {
     >li {
       padding: 12px;
       border-bottom: 1px solid black;
+      position: relative;
+
+      &:hover {
+        background-color: #333;
+        color: var(--yellow);
+
+        >ul {
+          display: block;
+          position: absolute;
+          left: 100%;
+          width: 100%;
+          top: 0;
+          background-color: var(--dark-gray);
+
+          >li {
+            color: white;
+            padding: 12px;
+            border-bottom: 1px solid black;
+
+            &:hover {
+              background-color: #333;
+              color: var(--yellow);
+            }
+          }
+        }
+      }
 
       >ul {
         display: none;
