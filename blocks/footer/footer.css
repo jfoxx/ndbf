@@ -16,6 +16,7 @@ footer .footer > div {
   a {
     color: white;
     text-decoration: none;
+    
     &:hover {
       color: var(--yellow);
       text-decoration: underline;
@@ -66,7 +67,7 @@ footer .footer > div {
           width: 15px;
           height: 15px;
           background-color: white;
-          margin-right: 10px;
+          margin-right: 5px;
         }
 
         &:hover {
