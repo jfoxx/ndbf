@@ -17,7 +17,8 @@
   --green : #b9be40;
   --blue : #00607d;
   --red : #b92355;
-  --light-gray: #b8c7d3;
+  --light-gray: #d9e2e7;
+  --lighter-gray : #E9EEF1;
 
   /* colors */
   --background-color: white;
@@ -260,4 +261,11 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+main .section[data-styles*='featured-well'] {
+  >.default-content-wrapper {
+    background-color: var(--lighter-gray);
+    padding: 40px;
+  }
 }
