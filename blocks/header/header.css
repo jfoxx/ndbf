@@ -286,3 +286,34 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+/* Breadcrumbs */
+/* stylelint-disable no-descending-specificity */
+
+main nav.breadcrumbs {
+  width: 100%;
+  background-color: var(--lighter-gray);
+
+  ol {
+    margin: 0;
+    padding: 10px calc((100% - 1200px)/2);
+    list-style: none;
+    display: flex;
+
+    li {
+      font-size: var(--body-font-size-s);
+
+       &::after {
+        content: '/';
+        margin: 0 20px;
+        color: var(--gray);
+       }
+
+       &:last-of-type {
+        &::after {
+          content: '';
+        }
+       }
+    }
+  }
+}
