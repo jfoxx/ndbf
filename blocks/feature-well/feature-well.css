@@ -1,0 +1,6 @@
+.feature-well{
+    >div {
+        background-color: var(--lighter-gray);
+        padding: 40px;
+    }    
+  }

@@ -13,6 +13,34 @@ import {
 } from './aem.js';
 
 /**
+ * Breaks sections into columns based on metadata.
+ * @param {Element} parent The parent element that is identified with data-layout metadata
+ */
+function groupSectionColumns(parent) {
+  const layout = parent.getAttribute('data-layout');
+  const layoutItems = layout.split('-');
+  const children = [...parent.children];
+  const div1 = document.createElement('div');
+  const div2 = document.createElement('div');
+  children.forEach((i) => {
+    if (children.indexOf(i) + 1 <= layoutItems[1]) {
+      div1.append(i);
+    } else {
+      div2.append(i);
+    }
+  });
+  parent.textConent = '';
+  parent.append(div1, div2);
+}
+
+function applySectionLayout(element) {
+  const layouts = [...element.querySelectorAll('div[data-layout]')];
+  layouts.forEach((i) => {
+    groupSectionColumns(i);
+  });
+}
+
+/**
  * overlays icon to make it an image mask instead of an img.
  * @param {Element, String, String} span The icon span element
  */
@@ -88,6 +116,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  applySectionLayout(main);
 }
 
 /**
