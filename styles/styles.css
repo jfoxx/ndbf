@@ -321,3 +321,22 @@ main .section[data-styles*='featured-well'] {
   }
 }
 
+
+/* Background Color */
+
+.section[data-background-color='yellow'] {
+  background-color: #feedc7;
+}
+
+.section[data-background-color='gray'] {
+  background-color: #B8C7D3;
+}
+
+/* Color Theme */
+.section[data-color-theme='yellow'] {
+  --theme-color : var(--yellow);
+}
+
+.section[data-color-theme='blue'] {
+  --theme-color : var(--blue);
+}

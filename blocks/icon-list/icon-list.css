@@ -1,3 +1,5 @@
+/*  stylelint-disable no-descending-specificity */
+
 .icon-list {
     &.boxes {
         display: flex;
@@ -11,6 +13,7 @@
             width: 100%;
             max-width: 325px;
             height: 100%;
+
             a {
                 display: flex;
                 flex-direction: column;
@@ -50,10 +53,10 @@
         >div {
             a {
                 background-color: var(--theme-color);
-                color: rgba(256,256,256,80%);
+                color: rgb(256 256 256 / 80%);
 
                 .icon {
-                    background-color: rgba(256,256,256,80%);
+                    background-color: rgb(256 256 256 / 80%);
                 }
 
                 &:hover {
