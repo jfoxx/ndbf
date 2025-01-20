@@ -17,6 +17,7 @@
   --green : #b9be40;
   --blue : #00607d;
   --red : #b92355;
+  --gray: #B8C7D3;
   --light-gray: #d9e2e7;
   --lighter-gray : #E9EEF1;
 
@@ -270,6 +271,7 @@ main .section[data-styles*='featured-well'] {
 
 
 /* Section Columns */
+/*  stylelint-disable no-descending-specificity */
 
 @media (width >= 900px ) {
   main .section[data-layout] .layout-wrapper {
@@ -282,24 +284,40 @@ main .section[data-styles*='featured-well'] {
     margin-right: 20px;
   }
   
-  main .section[data-layout="40/60"] .layout-wrapper > div:first-of-type {
-    flex: 0 1 calc(40% - 20px);
-    margin-right: 20px;
+  main .section[data-layout="40/60"] .layout-wrapper > div {
+    flex: 0 1 60%;
+
+    &:first-of-type {
+      flex: 0 1 calc(40% - 20px);
+      margin-right: 20px;
+    }
   }
   
-  main .section[data-layout="60/40"] .layout-wrapper > div:first-of-type {
-    flex: 0 1 calc(60% - 20px);
-    margin-right: 20px;
+  main .section[data-layout="60/40"] .layout-wrapper > div {
+    flex: 0 1 40%;
+
+    &:first-of-type {
+      flex: 0 1 calc(60% - 20px);
+      margin-right: 20px;
+    }
   }
   
-  main .section[data-layout="25/75"] .layout-wrapper > div:first-of-type {
-    flex: 0 1 calc(25% - 20px);
-    margin-right: 20px;
+  main .section[data-layout="25/75"] .layout-wrapper > div {
+    flex: 0 1 75%;
+
+    &:first-of-type {
+      flex: 0 1 calc(25% - 20px);
+      margin-right: 20px;
+    }
   }
   
-  main .section[data-layout="75/25"] .layout-wrapper > div:last-of-type {
-    flex: 0 1 calc(75% - 20px);
-    margin-right: 20px;
+  main .section[data-layout="75/25"] .layout-wrapper > div {
+    flex: 0 1 25%;
+
+    &:last-of-type {
+      flex: 0 1 calc(75% - 20px);
+      margin-right: 20px;
+    }
   }
 }
 

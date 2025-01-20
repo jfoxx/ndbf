@@ -16,6 +16,11 @@ export default function decorate(block) {
     textOverlay.append(i);
   });
   hs.forEach((i) => {
+    const span = document.createElement('span');
+    const htext = i.textContent;
+    span.innerText = htext;
+    i.textContent = '';
+    i.append(span);
     headlines.append(i);
   });
   text.append(headlines, textOverlay);
