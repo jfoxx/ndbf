@@ -1,0 +1,58 @@
+.teaser {
+
+    > div { position: relative;}
+
+    .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        img {
+            min-width: 100%;
+            height: auto;
+        }
+    }
+
+    .text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .headlines {
+            h2, h3 {
+                background-color: rgb(255 255 255 / 80%);
+                color: var(--blue);
+                margin: 0;
+                display: block;
+                padding: 10px 15px;
+            }
+        }
+
+        .text-overlay {
+            background-color: rgb(0 0 0 / 80%);
+            color: white;
+            padding: 15px;
+            width: calc(100% - 30px);
+            font-size: 12px;
+
+            p.button-container {
+                margin: 0;
+                text-align: right;
+            }
+        }
+
+    }
+
+    &.feature {
+        .text {
+            .headlines {
+                h2, h3 {
+                    background-color: rgb(0 96 125 / 80%);
+                    color: white;;
+                }
+            }
+        }
+    }
+}
