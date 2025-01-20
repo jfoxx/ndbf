@@ -1,0 +1,50 @@
+.link-bricks {
+    margin-top: 20px;
+    display: flex;
+    color: white;
+
+    .large {
+        width: calc(50% - 10px);
+        margin-right: 10px;
+        min-height: 100%;
+
+        >div {
+            height: calc(100% - 20px);
+            text-align: center;
+            padding: 10px;
+        }
+    }
+
+    .small {
+        width: calc(50% - 10px);
+        height: 100%;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        >div {
+            text-align: center;
+            padding: 10px;
+
+            &:last-of-type {
+                margin-top: 20px;
+            }
+        }
+    }
+
+
+    /* Colors */
+
+    .red {
+        background-color: var(--red);
+    }
+
+    .green {
+        background-color: var(--green);
+    }
+
+    .gray {
+        background-color: var(--gray);
+    }
+}
