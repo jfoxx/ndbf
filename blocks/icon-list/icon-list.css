@@ -1,0 +1,68 @@
+/*  stylelint-disable no-descending-specificity */
+
+.icon-list {
+    &.boxes {
+        display: flex;
+        justify-content: space-around;
+
+        @media (width <= 900px) {
+            flex-wrap: wrap;
+        }
+
+        >div {
+            width: 100%;
+            max-width: 325px;
+            height: 100%;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                background-color: white;
+                border: 2px solid var(--theme-color);
+                padding: 20px;
+                margin: 15px;
+                height: 100%;
+                aspect-ratio: 4/3;
+                font-size: var(--heading-font-size-l);
+                border-radius: 5px;
+
+                >.icon {
+                    background-color: var(--theme-color);
+                    width: 85px;
+                    height: 85px;
+                    display: block;
+                    margin: 0 auto 15px;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    color: var(--link-color);
+                    background-color: var(--theme-color);
+
+                    .icon {
+                        transition: all .5s ease;
+                        background-color: white;
+                    }
+                }
+        }
+        }
+    }
+
+    &.solid {
+        >div {
+            a {
+                background-color: var(--theme-color);
+                color: rgb(256 256 256 / 80%);
+
+                .icon {
+                    background-color: rgb(256 256 256 / 80%);
+                }
+
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+}
