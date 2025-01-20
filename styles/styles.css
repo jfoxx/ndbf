@@ -245,10 +245,6 @@ main > .section > div {
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
-  margin-top: 0;
-}
-
 @media (width >= 900px) {
   main > .section > div {
     padding: 0 32px;
@@ -269,3 +265,41 @@ main .section[data-styles*='featured-well'] {
     padding: 40px;
   }
 }
+
+
+
+
+/* Section Columns */
+
+@media (width >= 900px ) {
+  main .section[data-layout] .layout-wrapper {
+    flex-direction: row;
+    display: flex;
+  }
+
+  main .section[data-layout="50/50"] .layout-wrapper > div {
+    flex: 0 1 calc(50% - 20px);
+    margin-right: 20px;
+  }
+  
+  main .section[data-layout="40/60"] .layout-wrapper > div:first-of-type {
+    flex: 0 1 calc(40% - 20px);
+    margin-right: 20px;
+  }
+  
+  main .section[data-layout="60/40"] .layout-wrapper > div:first-of-type {
+    flex: 0 1 calc(60% - 20px);
+    margin-right: 20px;
+  }
+  
+  main .section[data-layout="25/75"] .layout-wrapper > div:first-of-type {
+    flex: 0 1 calc(25% - 20px);
+    margin-right: 20px;
+  }
+  
+  main .section[data-layout="75/25"] .layout-wrapper > div:last-of-type {
+    flex: 0 1 calc(75% - 20px);
+    margin-right: 20px;
+  }
+}
+
