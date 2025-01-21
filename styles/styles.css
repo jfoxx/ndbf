@@ -368,6 +368,7 @@ main .section[data-styles*='featured-well'] {
   background-color: #B8C7D3;
 }
 
+
 /* Color Theme */
 .section[data-color-theme='yellow'] {
   --theme-color : var(--yellow);
@@ -376,3 +377,8 @@ main .section[data-styles*='featured-well'] {
 .section[data-color-theme='blue'] {
   --theme-color : var(--blue);
 }
+
+.section[data-color-theme='red'] {
+  --theme-color : var(--red);
+}
+
