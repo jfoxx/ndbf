@@ -5,7 +5,7 @@
           "id": "asset-library",
           "title": "Assets",
           "environments": ["edit"],
-          "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/franklin/asset-selector.html?extConfigUrl=https%3A%2F%2Fmain--ndbf--jfoxx.aem.live%2Ftools%2Fassets-selector%2Fconfig.json",",
+          "url": "https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/franklin/asset-selector.html?extConfigUrl=https%3A%2F%2Fmain--ndbf--jfoxx.aem.live%2Ftools%2Fassets-selector%2Fconfig.json",
           "isPalette": true,
           "includePaths": ["**.docx**"],
           "passConfig": true,
